@@ -10,6 +10,12 @@ if(password.value != confirm_password.value) {
 }
 }
 
-password.onchange = validatePassword;
+password.onchange = validatePassword();
 confirm_password.onkeyup = validatePassword;
+
+
+
+function removediv(){
+    document.getElementById("headeralert").style.display = "none";
+}
 

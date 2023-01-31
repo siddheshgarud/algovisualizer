@@ -165,3 +165,11 @@ a {
         margin: 0px 15px;
     }
 }
+
+
+.displaynone{
+    display: none;
+}
+.displayvisible{
+    display: visible;
+}
