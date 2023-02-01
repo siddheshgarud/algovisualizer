@@ -2,6 +2,7 @@
 from django.shortcuts import render , redirect
 from django.http import HttpResponse
 import math , random
+
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login, logout
@@ -63,7 +64,7 @@ def signup_view(request):
                 return redirect('users:login')
             else:
                 messages.error(request , message= "Wrong OTP" , extra_tags="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative")
-                
+
 
 
 

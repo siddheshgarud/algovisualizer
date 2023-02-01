@@ -6,6 +6,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,24 +45,57 @@
         {{algorithmname}}
     </h1>
     <div id="bars" class="flex-container"></div>
+    <hr>
+    <br>
+    <div class="bg-black mb-4 rounded-md" style="margin: auto; width: 70%;">
+        <div class="flex items-center relative text-gray-200 bg-gray-800 px-4 py-2 text-xs font-sans" style="display: block;">
+            <span style="float: right;">
+                <a href="{{ request.get_full_path }}">Reload to update</a>
+            </span>
+            <span >
 
+                <form method="post" style="margin: 0;">
+                    {% csrf_token %}
+                    <select id="programmingdropdown" name="option" style="background: transparent !important;" onchange="this.form.submit();">
+                        <option class="Option" name="option" value="python" >Python</option>
+                        <option class="Option" name="option" value="c++" >C++</option>
+                        <option class="Option" name="option" value="java " >Java</option>
+                        <option class="Option" name="option" value="php" >php</option>
+                        <option class="Option" name="option" value="javascript" >Jaavascript</option>
+                        <option class="Option" name="option" value="ruby" >ruby</option>
+                        <option class="Option" name="option" value="r" >r</option>
+                      </select>
+                </form>
+            </span>
+            <p class="programinglanguage" style="display: none;">{{programinglanguage}}  </p>
+            <style>
+                .Option{
+                    background: black;
+                }
+            </style>
+
+        </div>
+        <div class="p-4 overflow-y-auto" style="color: white; background: white; padding: 0rem!important;">
+            {{algorithmcode |safe}}
+            <code class="!whitespace-pre hljs language-python"></code>
+        </div>
+
+
+    </div>
     <script>
-        import {EditorState} from "@codemirror/state"
-        import {EditorView, keymap} from "@codemirror/view"
-        import {defaultKeymap} from "@codemirror/commands"
+        var select = document.getElementById("programmingdropdown");
+        var targetValue  = "{{programinglanguage}}";
+
+        for (var i = 0; i < select.options.length; i++) {
+            if ((select.options[i].value).replace(/\s+/g, '') === (targetValue)) {
+            // Set the selected property to true for the matching option
+            select.options[i].selected = true;
+            break;
+            }
+        }
+
     </script>
-    <script>
-        var editor = CodeMirror.fromTextArea(document.getElementById("code"), {
-          mode: "javascript",
-          lineNumbers: true
-        });
-      </script>
-      <button id="run-code">Run</button>
-      <script>
-        document.getElementById("run-code").addEventListener("click", function() {
-          eval(editor.getValue());
-        });
-      </script>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
     <script src="{% static 'home/js/sorting.js' %}"></script>
     <script src="{% static 'home/js/bubble.js' %}"></script>
