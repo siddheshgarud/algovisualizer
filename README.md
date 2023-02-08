@@ -53,6 +53,63 @@ will eventually upload more pictures
 
 
 
+## Screenshots
+
+* Sign Up using Email Address
+
+![Sign up](https://github.com/siddheshgarud/algovisualizer/blob/main/Screenshot/Screenshot%20(6).png?raw=true)
+
+
+* It generates the otp and will send to your email address.
+
+![OTP](https://github.com/siddheshgarud/algovisualizer/blob/main/Screenshot/Screenshot%20(7).png?raw=true)
+
+* After providing the right OTP, the account will successfully create.
+
+![OTP](https://github.com/siddheshgarud/algovisualizer/blob/main/Screenshot/Screenshot%20(8).png?raw=true)
+
+* After login with correct credential it will force you to dashboard, Where you can see multiple algorithms
+
+![login](https://github.com/siddheshgarud/algovisualizer/blob/main/Screenshot/Screenshot%20(9).png?raw=true)
+
+* You can select particular algorithm of your choice. I'll go with bubble Sort 
+
+![dashboard](https://github.com/siddheshgarud/algovisualizer/blob/main/Screenshot/Screenshot%20(10).png?raw=true)
+
+* here you can see multiple options such as 
+    
+    "Speed" : which will change amount of time require to sort the array. 
+    
+    "New Array" : will generate new array 
+
+    "Visualize" : will start sortng the array. 
+    
+    "Size" : By changing size you can change array list like this. 
+
+![new array](https://github.com/siddheshgarud/algovisualizer/blob/main/Screenshot/Screenshot%20(11).png?raw=true)
+
+* You can see the code of the above algorithm. **Note** : Refresh will impact change in code.
+
+![code](https://github.com/siddheshgarud/algovisualizer/blob/main/Screenshot/Screenshot%20(14).png?raw=true)
+
+
+* You can change the language from the dropdown as below. Eventually change the code aswell
+
+![language](https://github.com/siddheshgarud/algovisualizer/blob/main/Screenshot/Screenshot%20(15).png?raw=true)
+
+* click on "Visualize" will start sorting the algorithm
+
+
+![sorting](https://github.com/siddheshgarud/algovisualizer/blob/main/Screenshot/Screenshot%20(17).png?raw=true)
+
+* After completing the sorting it will look like this.
+
+![sorted](https://github.com/siddheshgarud/algovisualizer/blob/main/Screenshot/Screenshot%20(20).png?raw=true)
+
+
+That's it. Thank You.
+
+
 
 ## Authors
 
